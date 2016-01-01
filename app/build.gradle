@@ -1,0 +1,78 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.19.2'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+def secrets = new XmlSlurper().parse(file("src/main/res/values/secrets.xml"))
+
+android {
+
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "halalguide.dk.eazyit.halalguide"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 3
+        versionName "1.0.1"
+    }
+    signingConfigs {
+        release {
+            storeFile file('/Users/Privat/Documents/HalalGuideDroid/halalguide.jks')
+            storePassword secrets.@storePassword.text()
+            keyAlias secrets.@keyAlias.text()
+            keyPassword secrets.@keyPassword.text()
+        }
+    }
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-DEBUG'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+}
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url "https://repo.commonsware.com.s3.amazonaws.com" }
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.1@aar') {
+        transitive = true;
+    }
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:recyclerview-v7:22.2.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.google.android.gms:play-services-gcm:7.8.0'
+    compile 'io.reactivex:rxjava:1.0.10'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'org.jsoup:jsoup:1.8.3'
+    compile 'com.loopj.android:android-async-http:1.4.8'
+    compile 'com.github.jaydeepw:poly-picker:v1.0.14'
+    compile 'commons-io:commons-io:2.4'
+    compile 'com.melnykov:floatingactionbutton:1.3.0'
+}

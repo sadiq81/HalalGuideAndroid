@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frontpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FrontPage">
+
+    <LinearLayout
+        android:id="@+id/shop_container"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:onClick="goToLocations"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/shop_image"
+            style="@style/FrontPageButtonImage"
+            android:src="@drawable/shop" />
+
+        <TextView
+            android:id="@+id/shop_text"
+            style="@style/FrontPageButtonText"
+            android:text="@string/shop"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mosque_container"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/mosque_image"
+            style="@style/FrontPageButtonImage"
+            android:src="@drawable/mosque" />
+
+        <TextView
+            android:id="@+id/mosque_text"
+            style="@style/FrontPageButtonText"
+            android:text="@string/mosque"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dining_container"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:onClick="goToLocations"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/dining_image"
+            style="@style/FrontPageButtonImage"
+            android:src="@drawable/dining" />
+
+        <TextView
+            android:id="@+id/dining_text"
+            style="@style/FrontPageButtonText"
+            android:text="@string/dining"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_container"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/shop_container"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:onClick="goToLocations"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/chat_image"
+            style="@style/FrontPageButtonImage"
+            android:src="@drawable/chat" />
+
+        <TextView
+            android:id="@+id/chat_text"
+            style="@style/FrontPageButtonText"
+            android:text="@string/chat"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/favorites_container"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/mosque_container"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/favorites_image"
+            style="@style/FrontPageButtonImage"
+            android:src="@drawable/favorite" />
+
+        <TextView
+            android:id="@+id/favorites_text"
+            style="@style/FrontPageButtonText"
+            android:text="@string/favorites"></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/latest_updates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/chat_container"
+        android:layout_marginTop="25dp"
+        android:text="@string/latest_updates" />
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/latest_updates">
+
+
+        <ListView
+            android:id="@+id/latest_updates_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></ListView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

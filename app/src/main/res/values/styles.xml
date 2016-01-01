@@ -1,0 +1,190 @@
+<resources>
+
+    <style name="FrontPageButton">
+        <item name="android:background">#00000000</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="FrontPageButtonImage" parent="HalalGuideImageViewGreenTint">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="FrontPageButtonText">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="HalalGuideEditText">
+        <item name="android:textColor">@color/greenTintColor</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="HalalGuideImageViewGreenTint">
+        <item name="android:tintMode">src_atop</item>
+        <item name="android:tint">@color/greenTintColor</item>
+        <item name="android:background">#00000000</item>
+    </style>
+
+    <style name="HalalGuideImageViewRedTint">
+        <item name="android:tintMode">src_atop</item>
+        <item name="android:tint">@color/redColor</item>
+    </style>
+
+    <style name="HGPopupMenu" parent="android:Widget.Holo.Light.ListPopupWindow">
+        <!--<item name="android:popupBackground">@color/greenTintColor</item>-->
+    </style>
+
+    <style name="PopupWrapper" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/HGPopupMenu</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="ActionBarHG" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/action_bar_bg</item>
+        <item name="android:logo">@android:color/transparent</item>
+        <item name="android:titleTextStyle">@style/AppTheme.HGActionBar.TitleTextStyle</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/action_bar_bg</item>
+        <item name="logo">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.HGActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ActionBarHG.MenuTextStyle" parent="android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="EditTextHG" parent="android:Widget.EditText">
+        <item name="android:background">@drawable/hg_edit_text_holo_light</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="AutoCompleteTextViewHG" parent="android:Widget.AutoCompleteTextView">
+        <item name="android:dropDownSelector">@drawable/hg_list_selector_holo_light</item>
+        <item name="android:background">@drawable/hg_edit_text_holo_light</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="CheckBoxHG" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/hg_btn_check_holo_light</item>
+    </style>
+
+    <style name="RadioButtonHG" parent="android:Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/hg_btn_radio_holo_light</item>
+    </style>
+
+    <style name="ButtonHG" parent="android:Widget.Button">
+        <item name="android:background">@drawable/hg_btn_default_holo_light</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="ImageButtonHG" parent="android:Widget.ImageButton">
+        <item name="android:background">@drawable/hg_btn_default_holo_light</item>
+    </style>
+
+    <style name="SpinnerHG" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/hg_spinner_background_holo_light</item>
+        <item name="android:dropDownSelector">@drawable/hg_list_selector_holo_light</item>
+    </style>
+
+    <style name="SpinnerDropDownItemHG" parent="android:Widget.DropDownItem.Spinner">
+        <item name="android:checkMark">@drawable/hg_btn_radio_holo_light</item>
+    </style>
+
+    <style name="TabHG">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">16dip</item>
+        <item name="android:paddingRight">16dip</item>
+        <item name="android:background">@drawable/hg_tab_indicator_holo</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minWidth">80dip</item>
+    </style>
+
+    <style name="TabTextHG">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <!-- v14 <item name="android:textAllCaps">true</item> -->
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:maxWidth">180dip</item>
+    </style>
+
+    <style name="ProgressBarHG" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/hg_progress_horizontal_holo_light</item>
+        <item name="android:indeterminateDrawable">
+            @drawable/hg_progress_indeterminate_horizontal_holo_light
+        </item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
+    </style>
+
+    <style name="SeekBarHG" parent="android:Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/hg_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/hg_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:minHeight">13dip</item>
+        <item name="android:maxHeight">13dip</item>
+        <item name="android:thumb">@drawable/hg_scrubber_control_selector_holo_light</item>
+        <item name="android:thumbOffset">16dip</item>
+        <item name="android:paddingLeft">16dip</item>
+        <item name="android:paddingRight">16dip</item>
+    </style>
+
+    <style name="RatingBarHG" parent="android:Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/hg_ratingbar_full_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/hg_ratingbar_full_holo_light</item>
+    </style>
+
+    <style name="RatingBarBigHG" parent="android:Widget.Holo.Light.RatingBar.Indicator">
+        <item name="android:progressDrawable">@drawable/hg_ratingbar_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/hg_ratingbar_holo_light</item>
+        <item name="android:minHeight">35dip</item>
+        <item name="android:maxHeight">35dip</item>
+    </style>
+
+    <style name="RatingBarSmallHG" parent="android:Widget.Holo.Light.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/hg_ratingbar_small_holo_light</item>
+        <item name="android:indeterminateDrawable">@drawable/hg_ratingbar_small_holo_light</item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
+    </style>
+
+    <style name="ToggleHG" parent="android:Widget.Button.Toggle">
+        <item name="android:background">@drawable/hg_btn_toggle_holo_light</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="ListViewHG" parent="android:Widget.ListView">
+        <item name="android:listSelector">@drawable/hg_list_selector_holo_light</item>
+    </style>
+
+    <style name="ListViewHG.White" parent="android:Widget.ListView.White">
+        <item name="android:listSelector">@drawable/hg_list_selector_holo_light</item>
+    </style>
+
+    <style name="SpinnerItemHG" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="MenuTextAppearanceHG" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@color/greenTintColor</item>
+    </style>
+
+</resources>
+

@@ -1,0 +1,6 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FrontPage">
+    <!--<item android:id="@+id/action_settings" android:title="@string/settings"-->
+    <!--android:orderInCategory="100" app:showAsAction="never" />-->
+</menu>
+

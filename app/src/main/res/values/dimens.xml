@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="location_cell_text_large">15sp</dimen>
+    <dimen name="location_cell_text_small">10sp</dimen>
+
+    <dimen name="tab_host_default_height">48dp</dimen>
+</resources>

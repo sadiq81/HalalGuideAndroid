@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="greenTintColor" type="color">#396560</item>
+    <item name="darkGreenTintColor" type="color">#193A2A</item>
+
+    <item name="redColor" type="color">#ffff0000</item>
+
+    <color name="hg_color">#396560</color>
+
+    <color name="dark_slate_gray">#2F4F4F</color>
+    <color name="gray_2">#AFAFAF</color>
+    <color name="gray_1">#C0C0C0</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>

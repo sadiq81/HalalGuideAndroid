@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:textViewStyle">@style/HalalGuideEditText</item>
+        <item name="android:actionBarStyle">@style/ActionBarHG</item>
+        <item name="android:popupMenuStyle">@style/HGPopupMenu</item>
+        <item name="android:actionBarWidgetTheme">@style/PopupWrapper</item>
+        <item name="android:itemTextAppearance">@style/MenuTextAppearanceHG</item>
+        <item name="android:editTextStyle">@style/EditTextHG</item>
+        <item name="android:textColorHighlight">#99396560</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewHG</item>
+        <item name="android:checkboxStyle">@style/CheckBoxHG</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonHG</item>
+        <item name="android:buttonStyle">@style/ButtonHG</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonHG</item>
+        <item name="android:spinnerStyle">@style/SpinnerHG</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemHG</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarHG</item>
+        <item name="android:seekBarStyle">@style/SeekBarHG</item>
+        <item name="android:ratingBarStyle">@style/RatingBarHG</item>
+        <item name="android:ratingBarStyleIndicator">@style/RatingBarBigHG</item>
+        <item name="android:ratingBarStyleSmall">@style/RatingBarSmallHG</item>
+        <item name="android:buttonStyleToggle">@style/ToggleHG</item>
+        <item name="android:listViewStyle">@style/ListViewHG</item>
+        <item name="android:listViewWhiteStyle">@style/ListViewHG.White</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemHG</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/ActionBarHG</item>
+
+    </style>
+
+    <style name="AppCombatThemeHG" parent="Base.Theme.AppCompat">
+        <item name="android:textViewStyle">@style/HalalGuideEditText</item>
+        <item name="android:actionBarStyle">@style/ActionBarHG</item>
+        <item name="android:popupMenuStyle">@style/HGPopupMenu</item>
+        <item name="android:actionBarWidgetTheme">@style/PopupWrapper</item>
+        <item name="android:itemTextAppearance">@style/MenuTextAppearanceHG</item>
+        <item name="android:editTextStyle">@style/EditTextHG</item>
+        <item name="android:textColorHighlight">#99396560</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewHG</item>
+        <item name="android:checkboxStyle">@style/CheckBoxHG</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonHG</item>
+        <item name="android:buttonStyle">@style/ButtonHG</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonHG</item>
+        <item name="android:spinnerStyle">@style/SpinnerHG</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemHG</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarHG</item>
+        <item name="android:seekBarStyle">@style/SeekBarHG</item>
+        <item name="android:ratingBarStyle">@style/RatingBarHG</item>
+        <item name="android:ratingBarStyleIndicator">@style/RatingBarBigHG</item>
+        <item name="android:ratingBarStyleSmall">@style/RatingBarSmallHG</item>
+        <item name="android:buttonStyleToggle">@style/ToggleHG</item>
+        <item name="android:listViewStyle">@style/ListViewHG</item>
+        <item name="android:listViewWhiteStyle">@style/ListViewHG.White</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemHG</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/ActionBarHG</item>
+
+    </style>
+
+
+</resources>

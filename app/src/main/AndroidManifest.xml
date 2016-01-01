@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dk.eazyit.halalguide">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name=".HGApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="@string/parse_app_id" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="@string/parse_client_key" />
+        <activity
+            android:name=".ui.front_page.activities.HGFrontPageActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.location.activties.HGLocationActivityHG"
+            android:clearTaskOnLaunch="false"
+            android:label="@string/title_activity_location"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.front_page.activities.HGFrontPageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.front_page.activities.HGFrontPageActivity" />
+        </activity>
+        <activity
+            android:name=".ui.location.activties.HGFilterActivityHG"
+            android:label="@string/title_activity_hgfilter"
+            android:parentActivityName=".ui.location.activties.HGLocationActivityHG">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.location.activties.HGLocationActivityHG" />
+        </activity>
+        <activity
+            android:name=".ui.common.activity.HGCategoryActivityHG"
+            android:label="@string/title_activity_hgcategory" />
+
+        <!--
+            <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.example.MyGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.example.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        -->
+
+        <activity
+            android:name=".ui.location_details.activities.HGLocationDetailsActivityHG"
+            android:label="" />
+
+        <activity
+            android:name=".ui.settings.activity.HGSettingsActivityHG"
+            android:label="@string/title_activity_hgsettings"
+            android:parentActivityName=".ui.front_page.activities.HGFrontPageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.front_page.activities.HGFrontPageActivity" />
+        </activity>
+        <activity
+            android:name="nl.changer.polypicker.ImagePickerActivity"
+            android:theme="@style/AppCombatThemeHG" />
+        <activity
+            android:name=".ui.create_location.HGCreateLocationActivity"
+            android:parentActivityName=".ui.location.activties.HGLocationActivityHG">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.location.activties.HGLocationActivityHG" />
+        </activity>
+        <activity
+            android:name=".ui.location_details.activities.HGLocationImagesActivity"
+            android:parentActivityName=".ui.location.activties.HGLocationActivityHG">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.location.activties.HGLocationActivityHG" />
+        </activity>
+    </application>
+
+</manifest>

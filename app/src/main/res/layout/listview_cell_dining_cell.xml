@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="60dp" >
+
+    <ImageView
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:id="@+id/thumbnail"
+        android:src="@drawable/dining"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/location_cell_text_large"
+        android:text="Safir Kebab"
+        android:maxLines="1"
+        android:id="@+id/name"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toEndOf="@+id/thumbnail"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jagtvej 23"
+        android:maxLines="1"
+        android:textSize="@dimen/location_cell_text_small"
+        android:id="@+id/road"
+        android:layout_below="@+id/name"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toEndOf="@+id/thumbnail"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/location_cell_text_small"
+        android:text="2200 København N"
+        android:maxLines="1"
+        android:id="@+id/postal_code"
+        android:layout_below="@+id/road"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toEndOf="@+id/thumbnail"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/location_cell_text_large"
+        android:text="2,73"
+        android:id="@+id/distance"
+        android:layout_above="@+id/road"
+        android:paddingTop="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/location_cell_text_small"
+        android:text="km"
+        android:id="@+id/km"
+        android:layout_alignTop="@+id/road"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_toStartOf="@+id/distance"
+        android:layout_toLeftOf="@+id/distance"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp">
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/pork"
+            android:src="@drawable/pork_true_small"
+            style="@style/HalalGuideImageViewRedTint"/>
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/alcohol"
+            android:src="@drawable/alcohol_true_small"
+            android:paddingTop="2dp"
+            style="@style/HalalGuideImageViewRedTint"/>
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/non_halal"
+            android:src="@drawable/non_halal_true_small"
+            android:paddingTop="2dp"
+            style="@style/HalalGuideImageViewRedTint"/>
+    </LinearLayout>
+
+</RelativeLayout>
