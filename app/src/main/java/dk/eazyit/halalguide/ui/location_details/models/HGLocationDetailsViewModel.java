@@ -25,8 +25,8 @@ import dk.eazyit.halalguide.services.HGReviewService;
 import dk.eazyit.halalguide.services.HGSmileyService;
 import dk.eazyit.halalguide.services.HGUserService;
 import dk.eazyit.halalguide.ui.common.models.HGBaseViewModel;
+import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
 import rx.subjects.BehaviorSubject;
 
 /**
@@ -100,12 +100,24 @@ public class HGLocationDetailsViewModel extends HGBaseViewModel {
             }
         });
 
-        HGSmileyService.getInstance().getSmileysObservable(location.getNavneloebenummer()).subscribeOn(AndroidSchedulers.mainThread()).subscribe(new Action1<List<HGSmiley>>() {
+        HGSmileyService.getInstance().getSmileysObservable(location.getNavneloebenummer()).subscribeOn(AndroidSchedulers.mainThread()).subscribe(new Subscriber<List<HGSmiley>>() {
             @Override
-            public void call(List<HGSmiley> smileys) {
+            public void onCompleted() {
+                decreaseCount();
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                decreaseCount();
+                exceptionSubject.onNext(new ParseException(e));
+            }
+
+            @Override
+            public void onNext(List<HGSmiley> hgSmileys) {
                 decreaseCount();
                 smileysSubject.onNext(HGLocationDetailsViewModel.this.smileys = smileys);
             }
+
         });
     }
 
