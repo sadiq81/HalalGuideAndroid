@@ -120,5 +120,6 @@
     <string name="favorite_unmark_toast">Removed from favorites</string>
     <string name="favorite_mark_toast">Added to favorites</string>
     <string name="navigation_unavailable">Navigation not available</string>
+    <string name="call_unavailable">Call no available</string>
 
 </resources>

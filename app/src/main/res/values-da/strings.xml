@@ -118,4 +118,5 @@
     <string name="favorite_unmark_toast">Fjernet fra favoritter</string>
     <string name="favorite_mark_toast">Tilføjet til favoritter</string>
     <string name="navigation_unavailable">Navigation ikke tilgængelig</string>
+    <string name="call_unavailable">Opkald ikke tilgængelig</string>
 </resources>

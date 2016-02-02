@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.crashlytics.android.answers.Answers;
+
 import java.io.IOException;
 import java.util.Map;
 
@@ -132,7 +134,12 @@ public class HGLocationDetailsActivityHG extends HGBaseActivity {
             case R.id.action_call:
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
                 callIntent.setData(Uri.parse("tel:" + viewModel.telephone()));
-                startActivity(callIntent);
+                if (callIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(callIntent);
+                } else{
+                    Toast.makeText(this, getString(R.string.call_unavailable), Toast.LENGTH_SHORT).show();
+                }
+
                 return true;
             case R.id.action_website:
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(viewModel.website()));

@@ -57,11 +57,6 @@ public class HGLocationActivityHG extends HGBaseActivity implements AbsListView.
 
         add_new.attachToListView(locations);
 
-        Answers.getInstance().logContentView(new ContentViewEvent()
-                .putContentName("Locations")
-                .putContentType("Technical documentation")
-                .putContentId("article-350"));
-
     }
 
     @Override
